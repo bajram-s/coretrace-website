@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Package Details — CoreTrace</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="coretrace-logo-modified.png">
+<style>
+.extra-option {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 8px;
+}
+.extra-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 157, 255, 0.4);
+  border-color: rgba(0, 157, 255, 0.4);
+  background: rgba(0, 255, 255, 0.05);
+}
+.language-switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background: rgba(20,25,35,0.75);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cbd6ea;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+.language-switcher a {
+  color: #cbd6ea;
+  text-decoration: none;
+  margin: 0 4px;
+  transition: color 0.3s ease;
+}
+.language-switcher a:hover {
+  color: var(--accent, #4ea1ff);
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">CoreTrace</div>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main style="padding:60px 20px;text-align:center;">
+  <h1 class="section-title" id="packageTitle">Package Details</h1>
+  <p id="packageDescription" style="max-width:800px;margin:10px auto;color:#cbd6ea;font-size:16px;"></p>
+
+  <h2 class="section-title" style="margin-top:50px;">⚙️ Add Extra Services</h2>
+  <form id="extrasForm" style="max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:16px;text-align:left;color:#cbd6ea;">
+    <label class="extra-option"><input type="checkbox" name="extra" value="Trend Research"> Trend Research — 20 €/month</label>
+    <label class="extra-option"><input type="checkbox" name="extra" value="3-Month Social Media Strategy"> 3-Month Social Media Strategy — 50 € (one-time)</label>
+    <label class="extra-option"><input type="checkbox" name="extra" value="Full Edited Professional Video"> Full Edited Professional Video — 15 € (one-time)</label>
+    <label class="extra-option"><input type="checkbox" name="extra" value="5 Ready-to-Post Designs"> 5 Ready-to-Post Designs — 20 € (one-time)</label>
+    <label class="extra-option"><input type="checkbox" name="extra" value="Full Optimized Profile"> Full Optimized Profile — 25 € (one-time)</label>
+    <label class="extra-option"><input type="checkbox" name="extra" value="Full Optimized Logo"> Full Optimized Logo — 30 € (one-time)</label>
+  </form>
+
+  <section id="order" style="padding:50px 0;text-align:center;">
+    <h2 class="section-title">🚀 Work with CoreTrace</h2>
+    <form id="contactForm" style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
+      <input type="text" id="selectedPackage" name="selectedPackage" readonly placeholder="Selected Package" style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;text-align:center;font-size:15px;">
+      <input type="text" id="name" name="name" placeholder="Your Name" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;font-size:15px;">
+      <input type="text" id="business" name="business" placeholder="Business Name" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;font-size:15px;">
+      <input type="email" id="email" name="email" placeholder="Email" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;font-size:15px;">
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;font-size:15px;">
+      <input type="text" id="location" name="location" placeholder="Location (City, Country)" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;font-size:15px;">
+      <textarea id="message" name="message" placeholder="Your Message (optional)" rows="5" style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:var(--panel);color:white;font-size:15px;resize:vertical;"></textarea>
+      <div class="cta-wrap" style="justify-content:center;gap:20px;margin-top:10px;">
+        <a href="index.html#packages" class="btn outline" style="font-size:16px;padding:14px 26px;">← Back to Packages</a>
+        <button type="submit" class="btn primary" style="font-size:16px;padding:14px 26px;">Send Inquiry</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-logo">CoreTrace</div>
+  <div class="copyright">© 2025 CoreTrace</div>
+</footer>
+
+<div class="language-switcher">
+  <a href="package-details.html" style="font-weight:700;">EN</a> |
+  <a href="package-details-sq.html">AL</a>
+</div>
+
+<script>
+const packageData = {
+  "SMM": {
+    title: "Package 1 – SMM",
+    desc: "Includes 4 posts per week (Reels & Images), full profile optimization, and engagement management."
+  },
+  "ADSMM": {
+    title: "Package 2 – ADSMM",
+    desc: "All of SMM plus ad campaigns on Instagram for growth and targeted reach."
+  },
+  "FADSMM": {
+    title: "Package 3 – FADSMM",
+    desc: "Full-service package with ads across Instagram, Facebook, and TikTok."
+  },
+  "Landing": {
+    title: "Basic Landing Page",
+    desc: "A simple one-page website with modern, responsive design and monthly maintenance."
+  },
+  "Website": {
+    title: "Full Detailed Website",
+    desc: "Multi-page site with full SEO setup, optimization, and continuous support."
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const pkg = params.get("package");
+const data = packageData[pkg] || { title: "Package Details", desc: "Choose a CoreTrace package to get started." };
+
+document.getElementById("packageTitle").textContent = data.title;
+document.getElementById("packageDescription").textContent = data.desc;
+document.getElementById("selectedPackage").value = data.title;
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const extras = Array.from(document.querySelectorAll('input[name="extra"]:checked')).map(el => el.value).join(", ");
+  const message = document.getElementById('message').value.trim();
+  const subject = encodeURIComponent("New Inquiry — " + data.title);
+  const body = encodeURIComponent(
+    "Package: " + data.title + "\nExtras: " + (extras || "None") + "\n\n" +
+    "Name: " + document.getElementById('name').value + "\n" +
+    "Business: " + document.getElementById('business').value + "\n" +
+    "Email: " + document.getElementById('email').value + "\n" +
+    "Phone: " + document.getElementById('phone').value + "\n" +
+    "Location: " + document.getElementById('location').value + "\n\n" +
+    "Message:\n" + (message || "None")
+  );
+  window.location.href = `mailto:coretracedevs@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
